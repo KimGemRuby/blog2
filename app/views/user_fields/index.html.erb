@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Fields</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date birth</th>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_fields.each do |user_field| %>
+      <tr>
+        <td><%= user_field.date_birth %></td>
+        <td><%= user_field.first_name %></td>
+        <td><%= user_field.last_name %></td>
+        <td><%= user_field.email %></td>
+        <td><%= user_field.city %></td>
+        <td><%= link_to 'Show', user_field %></td>
+        <td><%= link_to 'Edit', edit_user_field_path(user_field) %></td>
+        <td><%= link_to 'Destroy', user_field, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Field', new_user_field_path %>

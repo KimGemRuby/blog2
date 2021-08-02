@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date birth:</strong>
+  <%= @user_field.date_birth %>
+</p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @user_field.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @user_field.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user_field.email %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @user_field.city %>
+</p>
+
+<%= link_to 'Edit', edit_user_field_path(@user_field) %> |
+<%= link_to 'Back', user_fields_path %>
